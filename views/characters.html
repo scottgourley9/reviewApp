@@ -1,16 +1,25 @@
 <h1>Characters</h1>
-<ul class="people">
-  <li enlarge-directive films-directive film='person.films'ng-repeat="person in people track by $index" ng-click="showPhoto(person)">
+<section class="mainCharSection">
+  <img src="{{img}}" alt="" />
+  <ul class="people">
+    <li enlarge-directive films='person.films'ng-repeat="person in people track by $index" ng-click="showPhoto(person)">
+      {{person.name}}
 
-  </li>
-</ul>
-<img src="{{img}}" alt="" />
+    </li>
+    <div class="arrows">
+      <div class="arrow" ng-click="back()">
+        <
+      </div>
+      <div class="arrow" ng-click="next()">
+        >
+      </div>
+    </div>
+  </ul>
+  <!-- <h4>Click black to see what films they have been in!</h4> -->
+  <div class="films"films-directive >
 
-<div class="arrows">
-  <div class="arrow" ng-click="back()">
-    <
   </div>
-  <div class="arrow" ng-click="next()">
-    >
-  </div>
-</div>
+
+
+
+</section>

@@ -6,13 +6,18 @@ angular.module('reviewApp').controller('charactersCtrl', function($scope, mainSe
       $scope.getCharacters()
     }
   }
+  $scope.img = 'https://u.o0bc.com/avatars/no-user-image.gif'
+
   $scope.showPhoto = function(p){
     var theName = p.name.split(' ')[0].toLowerCase()
     for(var i = 0; i < mainService.images.length; i++){
-      if(theName === mainService.images[i].name){
+      if(theName === mainService.images[i].name && mainService.images[i].photo){
         $scope.img = mainService.images[i].photo
+        return
       }
+
     }
+    $scope.img = 'https://u.o0bc.com/avatars/no-user-image.gif'
   }
   $scope.back = function(){
     if($scope.page >= 2){

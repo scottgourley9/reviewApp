@@ -8,12 +8,13 @@ angular.module('reviewApp').directive('filmsDirective', function(mainService){
     link: function(scope, element, attrs){
       element.on('click', function(){
         var arr = []
-
-        scope.film.forEach(function(val){
+        // console.log(mainService.myFilms);
+        mainService.myFilms.forEach(function(val){
           mainService.getFilms(val).then(function(res){
             arr.push(res.data.title)
           })
         })
+        console.log(arr);
         scope.theFilms = arr
       })
     }

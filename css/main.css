@@ -13,3 +13,22 @@ nav {
   justify-content: space-around;
   align-items: center;
 }
+.films {
+  background-color: black;
+color: yellow;
+height: 300px;
+width: 200px;
+}
+h4 {
+  background-color: black;
+    color: yellow;
+    /* height: 40vw; */
+    width: 200px;
+
+    text-align: center;
+}
+.mainCharSection {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
