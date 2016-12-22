@@ -1,0 +1,16 @@
+<h1>Characters</h1>
+<ul class="people">
+  <li enlarge-directive films-directive film='person.films'ng-repeat="person in people track by $index" ng-click="showPhoto(person)">
+
+  </li>
+</ul>
+<img src="{{img}}" alt="" />
+
+<div class="arrows">
+  <div class="arrow" ng-click="back()">
+    <
+  </div>
+  <div class="arrow" ng-click="next()">
+    >
+  </div>
+</div>
